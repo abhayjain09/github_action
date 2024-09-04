@@ -1,4 +1,9 @@
 ---
+
+#
+#ansible-playbook  -i inventory final-main.yml --extra-vars "@../defaults/main.yml" --extra-vars "@../vars/main.yml" -vv
+
+
 - name: Check github_account variable (RUN ONCE)
   hosts: localhost
   gather_facts: yes
