@@ -1,7 +1,16 @@
 ---
 - name: Check github_account variable (RUN ONCE)
   hosts: localhost
+  become: yes
+  vars:
+    - github_account: abhayjain09
+    - github_repo: ansible-github_actions_runner
+    - hide_sensitive_logs: false
+  vars_files:
+       - ../defaults/main.yml
+       - ../vars/main.yml
   gather_facts: yes
+  
   tasks:
   - name: Include Assert tasks
     ansible.builtin.include_tasks: assert.yml
