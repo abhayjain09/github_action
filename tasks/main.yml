@@ -6,7 +6,7 @@
     - github_account: abhayjain09
     - github_repo: ansible-github_actions_runner
     - hide_sensitive_logs: false
-    - runner_state: "absent"
+    #- runner_state: "absent"
   vars_files:
        - ../defaults/main.yml
   gather_facts: yes

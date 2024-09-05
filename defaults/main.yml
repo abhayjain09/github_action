@@ -3,7 +3,7 @@
 runner_user: "{{ lookup('env', 'USER') }}"
 
 # Directory where the local runner will be installed
-runner_dir: /opt/actions-runner
+runner_dir: /opt/actions-runner/{{ github_repo }}
 
 # Version of the GitHub Actions Runner
 runner_version: "latest"
