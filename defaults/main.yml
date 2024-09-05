@@ -53,6 +53,16 @@ runner_name: "{{ ansible_facts.hostname }}"
 # Set to false when provisioning runners for more than one repository within single play
 all_runners_in_same_repo: true
 
+# GitHub Actions Runner architecture
+github_actions_architecture_map:
+  amd64: x64
+  x86_64: x64
+  armv7l: arm
+  aarch64: arm64
+  arm64: arm64
+github_actions_architecture: "{{ github_actions_architecture_map[ansible_facts.architecture] }}"
+
+
 # GitHub Repository user or Organization owner used for Runner registration
 # github_account: "youruser"
 
